@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(136, 69, 69);
+    color: white;
+}
+a{
+    color:white;
+}
+h1{
+    color: #FF851B;
+}
+img{
+    max-width: 400px;
+    height: 100%;
+}
+ul{
+    list-style-type: none;
+    list-style-position: inside;
+    margin: 0px;
+    padding: 0px;
+}
+#thirdDiv{
+    height: 600px;
+    max-width: 500px;
+    box-sizing: border-box;
+    background-color: #FF851B;
+    padding: 50px;
+    border: 1px solid black;
+}
+#spanId{
+    font-size: 18px;
+    margin: 50px;
+}
