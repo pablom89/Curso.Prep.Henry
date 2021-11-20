@@ -1,16 +1,24 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
 }
+:root{
+    --letra: rgb(197, 55, 55);
+    --fondo: black;
+}
 body{
     max-width: 100%;
     padding: 0px;
     margin: 0px;
 }
-
+a{
+    text-decoration: none;
+    font-weight:600;
+    color:var(--letra);
+}
 header{
     display:flex;
     justify-content: space-between;
-    margin-right: 150px;
+    margin-right: 140px;
     align-items: baseline;
 }
 hr{
@@ -24,12 +32,12 @@ ol, ul{
     margin: 0px;
     padding: 0px;
 }
-
 div{
     white-space: pre-line;
     text-align:left;
     padding-left: 100px;
     line-height: 1.4;
+    font-size: 1rem;
 }
 .flex{
     display: flex;
@@ -44,46 +52,101 @@ div{
 }
 
 img{
-    position:absolute;
-    top: 125px;
-    right: 150px;
-    border: 1px solid rgba(0, 0, 0, 0.815);
-    border-radius: 100%;
+        margin-right: 8rem;
+        border: 1px solid rgba(0, 0, 0, 0.815);
+        border-radius: 100%;
+        align-self: flex-start;
 }
 
 #desPersonal div b{
-    line-height: 25px;
+    line-height: 1.56rem;
 }
 
+.sm{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+}
+
+#dp1{
+    width: 48%;
+}
+
+#dp2{
+    width: 100%;
+    line-height: 0px;
+}
+
+/* ------------------- Pantallas menores a 900px -----------------------*/
 
 @media screen and (max-width: 900px) {
-    body, a {
-      background-color: black;
+    body {
+      background-color: var(--fondo);
       color:white;
     }
+    b{
+        color:chocolate;
+    }
     header{
-        display:flex;
-        justify-content: space-between;
+        justify-content: center;
         margin: 0px;
-        padding: 0px;
-        align-items: baseline;
+        text-align: center;
+    }
+    header h3{
+        display:none;
     }
     img{
-        position: static;
-        float: right;
-        top: 125px;
-        right: 150px;
-        border: 1px solid rgba(0, 0, 0, 0.815);
-        border-radius: 100%;
+        margin-right: 4rem;
+        border-color: white;
     }
     section h3{
         margin-left: 1rem;
     }
     div{
-        white-space: pre-line;
-        text-align:left;
-        padding-left: 1rem;
-        line-height: 1.4;
+        padding-left: 2rem;
+        margin-right: 0.8rem;
+    }
+    #dp1{
+        width: 48%;
     }
   }
 
+/* ------------------- Pantallas menores a 550px -----------------------*/
+
+@media screen and (max-width: 687px) {
+    .image {
+        display: block;
+    }
+    .sm{
+        justify-content: center;
+        margin: 0px;
+    }
+    #dp2{
+        line-height: 1.56rem;
+        text-align: center;
+    }
+    img{
+        margin: 1.5rem 3rem 1.5rem 3rem;
+        border-radius: 0;
+    }
+    section h3{
+        text-align: center;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    #dp1{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ------------------- Pantallas menores a 250px -----------------------*/
+
+@media screen and (max-width: 250px) {
+    #dp2{
+        word-break: break-all;
+    }
+}
